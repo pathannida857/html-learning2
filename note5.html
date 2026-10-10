@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Display Property</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px;
+      color: #263746;
+      background: #f5f8f7;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      color: #15324b;
+    }
+
+    section {
+      margin: 20px 0;
+      padding: 20px;
+      border: 1px solid #dce6e3;
+      border-radius: 10px;
+      background: white;
+    }
+
+    .block-example {
+      display: block;
+      margin: 8px 0;
+      padding: 8px;
+      color: white;
+      background: #16877c;
+    }
+
+    .inline-example {
+      display: inline;
+      padding: 8px;
+      color: white;
+      background: #245b80;
+    }
+
+    .inline-block-example {
+      display: inline-block;
+      width: 130px;
+      margin: 5px;
+      padding: 12px;
+      color: white;
+      background: #b36b2c;
+      text-align: center;
+    }
+
+    .hidden-example {
+      display: none;
+    }
+
+    .flex-example {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 12px;
+      background: #eaf4f4;
+    }
+
+    .grid-example {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .flex-example span, .grid-example span {
+      padding: 12px;
+      border-radius: 6px;
+      color: white;
+      background: #16877c;
+      text-align: center;
+    }
+
+    code {
+      padding: 2px 5px;
+      border-radius: 4px;
+      background: #eef2f2;
+    }
+
+    @media (max-width: 550px) {
+      body {
+        padding: 14px;
+      }
+
+      .grid-example {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS ki <code>display</code> property</h1>
+  <p>
+    <code>display</code> decide karta hai ki element page par kaise dikhega
+    aur doosre elements ke saath kaise arrange hoga.
+  </p>
+
+  <section>
+    <h2>1. display: block</h2>
+    <p>Block element poori available width leta hai aur nayi line se shuru hota hai.</p>
+    <span class="block-example">Block item 1</span>
+    <span class="block-example">Block item 2</span>
+  </section>
+
+  <section>
+    <h2>2. display: inline</h2>
+    <p>Inline elements ek hi line mein aate hain. In par width aur height aam taur par apply nahi hoti.</p>
+    <span class="inline-example">Inline item 1</span>
+    <span class="inline-example">Inline item 2</span>
+  </section>
+
+  <section>
+    <h2>3. display: inline-block</h2>
+    <p>Inline-block items ek line mein aate hain, aur unki width aur height set kar sakte hain.</p>
+    <span class="inline-block-example">Item 1</span>
+    <span class="inline-block-example">Item 2</span>
+    <span class="inline-block-example">Item 3</span>
+  </section>
+
+  <section>
+    <h2>4. display: none</h2>
+    <p>Is property se element page par nahi dikhta aur uske liye khaali jagah bhi nahi rehti.</p>
+    <p class="hidden-example">Yeh paragraph chhupa hua hai.</p>
+    <code>.hidden-example { display: none; }</code>
+  </section>
+
+  <section>
+    <h2>5. display: flex</h2>
+    <p>Flexbox items ko ek row ya column mein arrange karne ke liye kaam aata hai.</p>
+    <div class="flex-example">
+      <span>Flex 1</span>
+      <span>Flex 2</span>
+      <span>Flex 3</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>6. display: grid</h2>
+    <p>Grid items ko rows aur columns mein arrange karta hai.</p>
+    <div class="grid-example">
+      <span>Grid 1</span>
+      <span>Grid 2</span>
+      <span>Grid 3</span>
+    </div>
+  </section>
+</body>
+</html>
+
+
+<!doctype html>
+<html>
+    <head>
+        <style>
+            p{color:red;}
+            p.ex1{color:blue;}
+            p.ex2{color:green;}
+            p.ex3{color:yellow;}
+            p.ex4{color:orange;}
+
+        </style>
+    </head>
+    <body>
+        <p>this is a paragraph</p>
+        <p class="ex1">this is a paragraph</p>
+        <p class="ex2">this is a paragraph</p>
+        <p class="ex3">this is a paragraph</p>
+        <p class="ex4">this is a paragraph</p>
+</html>

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Udaan Public School mein admission ki jankari, admission process aur sample fee schedule dekhein.">
+  <title>Udaan Public School | Admission aur Fees</title>
+  <style>
+    :root {
+      --navy: #15324b;
+      --blue: #245b80;
+      --teal: #0b887b;
+      --mint: #e7f5ef;
+      --cream: #fbf8f0;
+      --gold: #f3bd55;
+      --ink: #263746;
+      --muted: #687985;
+      --white: #fff;
+      --line: #e4e9e8;
+      --shadow: 0 18px 50px rgba(21, 50, 75, .1);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 86px; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #fff;
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    button, input, select { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    .container { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+
+    .topline { background: var(--navy); color: #e9f3f5; font-size: .84rem; }
+    .topline-inner {
+      min-height: 37px; display: flex; justify-content: space-between;
+      align-items: center; gap: 14px;
+    }
+    .topline a { color: #fff; text-decoration: none; }
+    .navbar {
+      position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.96);
+      border-bottom: 1px solid var(--line); backdrop-filter: blur(12px);
+    }
+    .nav-inner { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 11px; text-decoration: none; color: var(--navy); }
+    .brand-mark {
+      width: 43px; height: 43px; display: grid; place-items: center; border-radius: 14px;
+      color: var(--navy); background: var(--gold); font-size: 1.45rem; font-weight: 800;
+    }
+    .brand-name { display: block; font-size: 1.06rem; font-weight: 800; line-height: 1.2; }
+    .brand-caption { display: block; margin-top: 3px; color: var(--muted); font-size: .72rem; letter-spacing: .07em; }
+    .nav-links { display: flex; align-items: center; gap: 25px; }
+    .nav-links a { color: var(--ink); font-size: .92rem; font-weight: 650; text-decoration: none; }
+    .nav-links a:hover { color: var(--teal); }
+    .nav-links .nav-cta { padding: 10px 17px; border-radius: 9px; color: #fff; background: var(--teal); }
+    .menu-button {
+      display: none; padding: 8px 12px; border: 1px solid var(--line); border-radius: 8px;
+      color: var(--navy); background: #fff; cursor: pointer;
+    }
+
+    .hero {
+      position: relative; overflow: hidden; padding: 76px 0 82px;
+      background: radial-gradient(circle at 88% 15%, rgba(243,189,85,.28), transparent 24%),
+        linear-gradient(120deg, #f1f8f4 0%, #fbf8f0 72%, #f7f1df 100%);
+    }
+    .hero::after {
+      position: absolute; right: -90px; bottom: -210px; width: 450px; height: 450px;
+      border: 1px solid rgba(11,136,123,.12); border-radius: 50%; content: "";
+      box-shadow: 0 0 0 45px rgba(11,136,123,.035), 0 0 0 90px rgba(11,136,123,.025);
+    }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 64px; align-items: center; position: relative; z-index: 1; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 99px;
+      color: #176d61; background: #e0f1e9; font-size: .82rem; font-weight: 750;
+    }
+    .eyebrow-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--teal); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 640px; margin: 18px 0 15px; color: var(--navy); font-size: clamp(2.5rem, 5.6vw, 4.3rem); line-height: 1.09; letter-spacing: -.045em; }
+    h1 span { color: var(--teal); }
+    .hero-copy { max-width: 550px; color: #586b76; font-size: 1.08rem; }
+    .button-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 27px; }
+    .button {
+      display: inline-flex; justify-content: center; align-items: center; gap: 8px;
+      min-height: 47px; padding: 11px 19px; border: 1px solid transparent; border-radius: 9px;
+      font-weight: 750; text-decoration: none; cursor: pointer; transition: transform .18s, background .18s;
+    }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { color: #fff; background: var(--teal); }
+    .button-primary:hover { background: #087468; }
+    .button-outline { border-color: #cbd8d5; color: var(--navy); background: rgba(255,255,255,.65); }
+    .hero-note { margin: 17px 0 0; color: var(--muted); font-size: .82rem; }
+    .hero-card {
+      position: relative; padding: 27px; border: 1px solid rgba(255,255,255,.8); border-radius: 20px;
+      background: rgba(255,255,255,.88); box-shadow: var(--shadow);
+    }
+    .hero-card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+    .hero-card h2 { margin-bottom: 3px; color: var(--navy); font-size: 1.27rem; }
+    .hero-card p { margin-bottom: 0; color: var(--muted); font-size: .9rem; }
+    .card-icon { font-size: 1.7rem; }
+    .quick-list { display: grid; gap: 14px; margin: 23px 0 0; padding: 0; list-style: none; }
+    .quick-list li { display: flex; align-items: flex-start; gap: 12px; }
+    .check {
+      flex: 0 0 24px; width: 24px; height: 24px; display: grid; place-items: center;
+      border-radius: 50%; color: var(--teal); background: var(--mint); font-size: .8rem; font-weight: 900;
+    }
+    .quick-list strong { display: block; color: var(--navy); font-size: .92rem; }
+    .quick-list span:last-child { color: var(--muted); font-size: .82rem; }
+
+    .trust-strip { border-bottom: 1px solid var(--line); background: #fff; }
+    .trust-grid { display: grid; grid-template-columns: repeat(3,1fr); padding: 21px 0; }
+    .trust-item { padding: 3px 20px; text-align: center; border-right: 1px solid var(--line); }
+    .trust-item:last-child { border-right: 0; }
+    .trust-item strong { display: block; color: var(--navy); font-size: .98rem; }
+    .trust-item span { color: var(--muted); font-size: .82rem; }
+
+    section { padding: 78px 0; }
+    .section-heading { max-width: 660px; margin: 0 auto 37px; text-align: center; }
+    .section-kicker { margin-bottom: 8px; color: var(--teal); font-size: .8rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .section-heading h2 { margin-bottom: 10px; color: var(--navy); font-size: clamp(1.9rem, 3.8vw, 2.7rem); line-height: 1.2; }
+    .section-heading p { margin-bottom: 0; color: var(--muted); }
+    .steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 15px; }
+    .step-card { padding: 22px 19px; border: 1px solid var(--line); border-radius: 13px; background: #fff; }
+    .step-number { display: grid; width: 36px; height: 36px; place-items: center; margin-bottom: 16px; border-radius: 11px; color: var(--teal); background: var(--mint); font-weight: 850; }
+    .step-card h3 { margin-bottom: 6px; color: var(--navy); font-size: 1.02rem; }
+    .step-card p { margin-bottom: 0; color: var(--muted); font-size: .87rem; }
+
+    .admission-section { background: var(--cream); }
+    .admission-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 48px; align-items: start; }
+    .admission-info h2 { margin: 12px 0; color: var(--navy); font-size: clamp(1.9rem, 3.5vw, 2.6rem); line-height: 1.2; }
+    .admission-info > p { color: var(--muted); }
+    .document-box { margin-top: 23px; padding: 20px; border: 1px solid #e7e5d9; border-radius: 12px; background: #fff; }
+    .document-box h3 { margin-bottom: 9px; color: var(--navy); font-size: .98rem; }
+    .document-box ul { margin: 0; padding-left: 19px; color: var(--muted); font-size: .87rem; }
+    .form-card { padding: 27px; border: 1px solid #ecece5; border-radius: 16px; background: #fff; box-shadow: 0 12px 36px rgba(21,50,75,.06); }
+    .form-card h3 { margin-bottom: 4px; color: var(--navy); font-size: 1.3rem; }
+    .form-intro { margin-bottom: 21px; color: var(--muted); font-size: .87rem; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    .field { display: grid; gap: 6px; }
+    .field-full { grid-column: 1 / -1; }
+    .field label { color: var(--navy); font-size: .85rem; font-weight: 700; }
+    .field input, .field select {
+      width: 100%; min-height: 45px; padding: 10px 12px; border: 1px solid #d7dfdf;
+      border-radius: 8px; outline: none; color: var(--ink); background: #fff;
+    }
+    .field input:focus, .field select:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(11,136,123,.12); }
+    .transport-option { display: flex; align-items: center; gap: 9px; color: var(--muted); font-size: .87rem; }
+    .transport-option input { width: 17px; height: 17px; accent-color: var(--teal); }
+    .estimate { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin: 17px 0; padding: 13px 15px; border-radius: 9px; background: #f0f7f3; }
+    .estimate span { color: #52675f; font-size: .86rem; }
+    .estimate strong { color: var(--navy); font-size: 1.13rem; white-space: nowrap; }
+    .form-card .button { width: 100%; border: 0; }
+    .form-disclaimer { margin: 12px 0 0; color: #78858c; font-size: .75rem; text-align: center; }
+    .form-result { display: none; margin-top: 16px; padding: 14px; border: 1px solid #a8d8be; border-radius: 9px; color: #205c40; background: #effaf3; font-size: .88rem; }
+    .form-result.show { display: block; }
+
+    .fees-section { background: #fff; }
+    .fee-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 13px; box-shadow: 0 10px 30px rgba(21,50,75,.045); }
+    .fee-table { width: 100%; min-width: 660px; border-collapse: collapse; }
+    .fee-table th, .fee-table td { padding: 16px 19px; border-bottom: 1px solid var(--line); text-align: left; }
+    .fee-table th { color: #fff; background: var(--navy); font-size: .86rem; }
+    .fee-table td { color: #52636e; font-size: .9rem; }
+    .fee-table td:first-child { color: var(--navy); font-weight: 750; }
+    .fee-table tr:last-child td { border-bottom: 0; }
+    .fee-table tbody tr:nth-child(even) { background: #f8faf9; }
+    .fee-note { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 18px; }
+    .fee-note p { margin: 0; padding: 14px 16px; border-radius: 9px; color: #52636e; background: #f5f8f7; font-size: .82rem; }
+    .fee-note strong { color: var(--navy); }
+    .fees-cta { margin-top: 24px; text-align: center; }
+
+    .contact-section { padding: 56px 0; color: #fff; background: var(--navy); }
+    .contact-grid { display: flex; justify-content: space-between; align-items: center; gap: 28px; }
+    .contact-grid h2 { margin-bottom: 5px; font-size: 1.75rem; }
+    .contact-grid p { margin-bottom: 0; color: #cad8df; }
+    .contact-details { display: flex; flex-wrap: wrap; gap: 12px 24px; color: #edf4f6; font-size: .92rem; }
+    .contact-details a { color: #fff; text-decoration: none; }
+    footer { padding: 18px 0; color: #78858c; background: #102a40; font-size: .8rem; text-align: center; }
+    footer p { margin: 0; }
+
+    @media (max-width: 800px) {
+      .hero-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+      .admission-layout { grid-template-columns: 1fr; gap: 28px; }
+      .steps { grid-template-columns: repeat(2,1fr); }
+      .nav-links { gap: 15px; }
+      .nav-links a { font-size: .85rem; }
+    }
+    @media (max-width: 620px) {
+      .container { width: min(100% - 30px, 520px); }
+      .topline-inner { justify-content: center; min-height: 34px; font-size: .76rem; }
+      .topline-inner span:last-child { display: none; }
+      .nav-inner { min-height: 67px; }
+      .menu-button { display: block; }
+      .nav-links {
+        position: absolute; top: 100%; right: 0; left: 0; display: none; padding: 11px 20px 17px;
+        align-items: stretch; gap: 3px; border-bottom: 1px solid var(--line); background: #fff;
+      }
+      .nav-links.open { display: flex; flex-direction: column; }
+      .nav-links a { padding: 9px 7px; font-size: .95rem; }
+      .nav-links .nav-cta { margin-top: 5px; text-align: center; }
+      .hero { padding: 53px 0 55px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+      h1 { font-size: clamp(2.45rem, 12vw, 3.7rem); }
+      .hero-copy { font-size: 1rem; }
+      .hero-card { padding: 21px; }
+      .trust-grid { grid-template-columns: 1fr; padding: 12px 0; }
+      .trust-item { padding: 10px; border-right: 0; border-bottom: 1px solid var(--line); }
+      .trust-item:last-child { border-bottom: 0; }
+      section { padding: 58px 0; }
+      .section-heading { margin-bottom: 26px; }
+      .steps { gap: 10px; }
+      .step-card { padding: 16px 14px; }
+      .step-card p { font-size: .81rem; }
+      .form-card { padding: 20px 16px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .field-full { grid-column: auto; }
+      .fee-note { grid-template-columns: 1fr; }
+      .contact-grid { align-items: flex-start; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topline">
+    <div class="container topline-inner">
+      <span>Session 2026–27 ke liye admission enquiry</span>
+      <span>Call karein: <a href="tel:+919876543210">+91 98765 43210</a></span>
+    </div>
+  </div>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#home" aria-label="Udaan Public School home">
+        <span class="brand-mark" aria-hidden="true">U</span>
+        <span><span class="brand-name">Udaan Public School</span><span class="brand-caption">SEEKHNA · SOCHNA · AAGE BADHNA</span></span>
+      </a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+      <nav class="nav-links" id="main-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#process">Admission process</a>
+        <a href="#admission">Apply</a>
+        <a href="#fees">Fees</a>
+        <a class="nav-cta" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow"><span class="eyebrow-dot"></span> Har bachche ke liye ek nayi udaan</span>
+          <h1>Achhi shuruaat,<br><span>behtar bhavishya.</span></h1>
+          <p class="hero-copy">Pehli enquiry se admission aur fee planning tak—saari zaroori jaankari ek hi jagah. Apne bachche ke liye sahi class chuniye aur humse baat shuru kijiye.</p>
+          <div class="button-row">
+            <a class="button button-primary" href="#admission">Admission enquiry karein <span aria-hidden="true">→</span></a>
+            <a class="button button-outline" href="#fees">Fee structure dekhein</a>
+          </div>
+          <p class="hero-note">Yeh school website ka sample hai. School ke asli details aur fees neeche update karein.</p>
+        </div>
+        <aside class="hero-card" aria-label="Admission ki zaroori jaankari">
+          <div class="hero-card-top">
+            <div><h2>Admission ka safar</h2><p>Simple, clear aur family-friendly.</p></div>
+            <span class="card-icon" aria-hidden="true">🎒</span>
+          </div>
+          <ul class="quick-list">
+            <li><span class="check" aria-hidden="true">✓</span><span><strong>Enquiry aur campus visit</strong><span>School ko samjhein, apne sawaal poochhein.</span></span></li>
+            <li><span class="check" aria-hidden="true">✓</span><span><strong>Form aur documents</strong><span>Bachche ki basic details ke saath apply karein.</span></span></li>
+            <li><span class="check" aria-hidden="true">✓</span><span><strong>Confirmation aur fee plan</strong><span>Admission team se agle steps confirm karein.</span></span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <div class="trust-strip" aria-label="School highlights">
+      <div class="container trust-grid">
+        <div class="trust-item"><strong>Playgroup se Class 12</strong><span>Apni classes ke hisaab se update karein</span></div>
+        <div class="trust-item"><strong>Bachcha-kendrit seekhna</strong><span>Har student ki growth par dhyaan</span></div>
+        <div class="trust-item"><strong>Saaf fee jaankari</strong><span>Kharchon ko pehle se samajhne ki suvidha</span></div>
+      </div>
+    </div>
+
+    <section id="process">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Admission journey</p>
+          <h2>Admission ke chaar aasaan steps</h2>
+          <p>Har kadam par school team se madad lein. Final eligibility aur dates school office se confirm karein.</p>
+        </div>
+        <div class="steps">
+          <article class="step-card"><span class="step-number">01</span><h3>Enquiry karein</h3><p>Class, availability, age criteria aur visit ke baare mein poochhein.</p></article>
+          <article class="step-card"><span class="step-number">02</span><h3>Form bharein</h3><p>Student aur parent ki sahi jaankari ke saath admission form jama karein.</p></article>
+          <article class="step-card"><span class="step-number">03</span><h3>Documents dein</h3><p>Birth proof, photo aur pichhli class ke records school ko dikhayein.</p></article>
+          <article class="step-card"><span class="step-number">04</span><h3>Confirmation paayein</h3><p>Seat, admission date aur fee payment ki details office se verify karein.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="admission-section" id="admission">
+      <div class="container admission-layout">
+        <div class="admission-info">
+          <p class="section-kicker">Start here</p>
+          <h2>Admission enquiry bhejein</h2>
+          <p>Form bharne ke baad school office se class availability, campus visit aur admission ke agle kadam ke baare mein baat karein.</p>
+          <div class="document-box">
+            <h3>Saath rakhne wale documents</h3>
+            <ul>
+              <li>Bachche ka birth certificate ya age proof</li>
+              <li>Bachche ki recent passport-size photo</li>
+              <li>Parent/guardian ka ID aur contact details</li>
+              <li>Pichhli class ki marksheet ya transfer certificate, agar lagu ho</li>
+            </ul>
+          </div>
+        </div>
+        <form class="form-card" id="admission-form">
+          <h3>Student ki basic details</h3>
+          <p class="form-intro">Saare * wale fields bharna zaroori hai.</p>
+          <div class="form-grid">
+            <div class="field">
+              <label for="student-name">Student ka naam *</label>
+              <input id="student-name" name="studentName" type="text" autocomplete="name" required maxlength="80" placeholder="Jaise: Aarav Sharma">
+            </div>
+            <div class="field">
+              <label for="class-choice">Kis class mein admission chahiye? *</label>
+              <select id="class-choice" name="classChoice" required>
+                <option value="">Class chunein</option>
+                <option value="pre-primary">Pre-primary</option>
+                <option value="1-5">Class 1–5</option>
+                <option value="6-8">Class 6–8</option>
+                <option value="9-10">Class 9–10</option>
+                <option value="11-12">Class 11–12</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="parent-name">Parent/guardian ka naam *</label>
+              <input id="parent-name" name="parentName" type="text" autocomplete="name" required maxlength="80" placeholder="Aapka poora naam">
+            </div>
+            <div class="field">
+              <label for="phone">Mobile number *</label>
+              <input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" pattern="[0-9+\-\s()]{10,16}" required placeholder="Jaise: 98765 43210">
+            </div>
+            <div class="field field-full">
+              <label for="email">Email (optional)</label>
+              <input id="email" name="email" type="email" autocomplete="email" maxlength="120" placeholder="naam@example.com">
+            </div>
+            <label class="transport-option field-full" for="transport">
+              <input id="transport" name="transport" type="checkbox">
+              School transport chahiye (sample estimate mein ₹1,500/mahina jodega)
+            </label>
+          </div>
+          <div class="estimate" aria-live="polite">
+            <span>Estimated first payment<br><small>Admission + annual charges + 1 mahine ki tuition</small></span>
+            <strong id="estimate-amount">Class chunein</strong>
+          </div>
+          <button class="button button-primary" type="submit">Enquiry submit karein <span aria-hidden="true">→</span></button>
+          <p class="form-disclaimer">Demo: yeh form data server par nahi bhejta aur payment nahi leta. Asli submissions ke liye school backend jodein.</p>
+          <div class="form-result" id="form-result" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="fees-section" id="fees">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Plan with clarity</p>
+          <h2>Sample fee structure</h2>
+          <p>Yeh sirf website demo ke liye banaye gaye udaharan hain—school ki asli fee list nahi.</p>
+        </div>
+        <div class="fee-wrap">
+          <table class="fee-table">
+            <thead>
+              <tr><th>Class group</th><th>Admission fee (one-time)</th><th>Tuition (mahina)</th><th>Annual charges (saal)</th><th>First payment estimate*</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Pre-primary</td><td>₹5,000</td><td>₹2,500</td><td>₹4,000</td><td>₹11,500</td></tr>
+              <tr><td>Class 1–5</td><td>₹6,000</td><td>₹3,000</td><td>₹5,000</td><td>₹14,000</td></tr>
+              <tr><td>Class 6–8</td><td>₹7,000</td><td>₹3,500</td><td>₹6,000</td><td>₹16,500</td></tr>
+              <tr><td>Class 9–10</td><td>₹8,000</td><td>₹4,000</td><td>₹7,000</td><td>₹19,000</td></tr>
+              <tr><td>Class 11–12</td><td>₹9,000</td><td>₹4,500</td><td>₹8,000</td><td>₹21,500</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="fee-note">
+          <p><strong>*Estimate ka matlab:</strong> One-time admission fee + annual charges + pehle mahine ki tuition. Transport, books, uniform aur optional activities shamil nahi hain.</p>
+          <p><strong>Payment se pehle:</strong> Final amount, due dates, instalments, refund policy aur discounts school accounts office se likhit mein confirm karein.</p>
+        </div>
+        <div class="fees-cta"><a class="button button-primary" href="#admission">Apni class ka estimate dekhein</a></div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container contact-grid">
+        <div><h2>School se baat karein</h2><p>Admission, campus visit aur final fee details ke liye office se sampark karein.</p></div>
+        <div class="contact-details">
+          <span>📞 <a href="tel:+919876543210">+91 98765 43210</a></span>
+          <span>✉️ <a href="mailto:admissions@example.com">admissions@example.com</a></span>
+          <span>📍 Apna school address yahan likhein</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container"><p>© 2026 Udaan Public School · Sample website — asli school details, fees aur contact update karein.</p></div></footer>
+
+  <script>
+    const feePlans = {
+      "pre-primary": { admission: 5000, tuition: 2500, annual: 4000 },
+      "1-5": { admission: 6000, tuition: 3000, annual: 5000 },
+      "6-8": { admission: 7000, tuition: 3500, annual: 6000 },
+      "9-10": { admission: 8000, tuition: 4000, annual: 7000 },
+      "11-12": { admission: 9000, tuition: 4500, annual: 8000 }
+    };
+
+    const admissionForm = document.getElementById("admission-form");
+    const classChoice = document.getElementById("class-choice");
+    const transportChoice = document.getElementById("transport");
+    const estimateAmount = document.getElementById("estimate-amount");
+    const formResult = document.getElementById("form-result");
+    const navMenu = document.getElementById("main-nav");
+    const menuButton = document.querySelector(".menu-button");
+
+    function updateEstimate() {
+      const plan = feePlans[classChoice.value];
+      if (!plan) {
+        estimateAmount.textContent = "Class chunein";
+        return;
+      }
+      const total = plan.admission + plan.tuition + plan.annual + (transportChoice.checked ? 1500 : 0);
+      estimateAmount.textContent = `₹${total.toLocaleString("en-IN")}`;
+    }
+
+    classChoice.addEventListener("change", updateEstimate);
+    transportChoice.addEventListener("change", updateEstimate);
+
+    admissionForm.addEventListener("input", () => {
+      formResult.classList.remove("show");
+      formResult.textContent = "";
+    });
+
+    admissionForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (!admissionForm.reportValidity()) return;
+
+      const studentName = document.getElementById("student-name").value.trim();
+      const reference = `UD-${Date.now().toString().slice(-7)}`;
+      formResult.textContent = `Shukriya, ${studentName}! Aapki demo enquiry taiyar hai (Reference: ${reference}). Yeh details kahin save ya send nahi hui hain—school office se seedha sampark karein.`;
+      formResult.classList.add("show");
+    });
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = navMenu.classList.toggle("open");
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    navMenu.addEventListener("click", (event) => {
+      if (event.target instanceof HTMLAnchorElement) {
+        navMenu.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+      }
+    });
+  </script>
+</body>
+</html>
